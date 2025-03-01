@@ -16,13 +16,21 @@
     </style>
 </head>
 <body>
+    <div class="setTimer">
+    <input type="number" id="setRounds" placeholder="Minutes" min="0" max="59">
+    <input type="number" id="setMinutes" placeholder="Minutes" min="0" max="59">
+    <input type="number" id="setSeconds" placeholder="Seconds" min="0" max="59">
+    <button onclick="startTimer()">Start</button>
+    </div>
+    <div class="timer">
     <script src="script.js"></script>
     <div class="counters">
-        Round: <span id="rounds">3</span><br>
-        Time: <span id="time">20:00</span>
+        Round: <span id="rounds">0</span><br>
+        Time: <span id="time">00:00</span>
     </div>
     <button onclick="startTimer()">Start</button>
     <button onclick="stopTimer()">Stop</button>
-    <button onclick="resetTimer()">Reset</button>
+    <button onclick="endTimer()">End</button>
+    </div>
 </body>
 </html>
