@@ -1,6 +1,6 @@
 let timer;
 let hours = 0;
-let minutes = 0;
+let minutes = 2;
 let seconds = 0;
 let running = false;
 
@@ -26,14 +26,14 @@ function resetTimer() {
 }
 
 function updateTime() {
-    seconds++;
-    if (seconds === 60) {
-        seconds = 0;
-        minutes++;
+    seconds--;
+    if (seconds === 0) {
+        seconds = 60;
+        minutes--;
     }
-    if (minutes === 60) {
-        minutes = 0;
-        hours++;
+    if (minutes === 0) {
+        minutes = 60;
+        hours--;
     }
 
     document.getElementById('time').innerText = 
