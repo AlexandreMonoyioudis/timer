@@ -1,6 +1,6 @@
 let timer;
-let round = 3;
-let minutes = 2;
+let round = 0;
+let minutes = 0;
 let seconds = 0;
 let running = false;
 let startMinutes = 0;
@@ -8,9 +8,9 @@ let startSeconds = 0;
 
 function setAndStartTimer(){
     
-    startMinutes = document.getElementById('setMinutes')
-    startSeconds = document.getElementById('setSeconds')
-    startRounds = document.getElementById('setRounds')
+    startMinutes = document.getElementById('setMinutes').value 
+    startSeconds = document.getElementById('setSeconds').value 
+    startRounds = document.getElementById('setRounds').value 
     startTimer()
 }
 
