@@ -20,8 +20,9 @@ function resetTimer() {
     running = false;
     clearInterval(timer);
     hours = 0;
-    minutes = 0;
+    minutes = 2;
     seconds = 0;
+    round = 3;
     document.getElementById('time').innerText = '02:00';
 }
 
