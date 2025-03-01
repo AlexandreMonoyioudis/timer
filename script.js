@@ -7,10 +7,9 @@ let startMinutes = 0;
 let startSeconds = 0;
 
 function setAndStartTimer(){
-    
-    startMinutes = document.getElementById('setMinutes').value 
-    startSeconds = document.getElementById('setSeconds').value 
-    startRounds = document.getElementById('setRounds').value 
+    startMinutes = parseInt(document.getElementById('setMinutes').value) || 0;
+    startSeconds = parseInt(document.getElementById('setSeconds').value) || 0;
+    startRounds = parseInt(document.getElementById('setRounds').value) || 1;
 }
 
 function startTimer() {
