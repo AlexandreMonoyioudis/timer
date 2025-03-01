@@ -4,6 +4,10 @@ let minutes = 2;
 let seconds = 0;
 let running = false;
 
+function setTimer() {
+    startTimer()
+}
+
 function startTimer() {
     if (!running) {
         running = true;
