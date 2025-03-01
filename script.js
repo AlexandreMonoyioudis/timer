@@ -1,5 +1,5 @@
 let timer;
-let round = 0;
+let round = 1;
 let minutes = 0;
 let seconds = 0;
 let running = false;
