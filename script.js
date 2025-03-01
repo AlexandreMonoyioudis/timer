@@ -27,6 +27,7 @@ function stopTimer() {
 function updateTime() {
     if (minutes === 0 && seconds === 0 && round === 1) {
         alert("Time's up!");
+        stopTimer();
     }
     
     if (seconds === 0 && minutes === 0) {
