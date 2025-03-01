@@ -9,8 +9,8 @@ let startSeconds = 0;
 function setAndStartTimer(){
     
     startMinutes = document.getElementById('setMinutes')
-    startMinutes = document.getElementById('setSeconds')
-    startSeconds = document.getElementById('setRounds')
+    startSeconds = document.getElementById('setSeconds')
+    startRounds = document.getElementById('setRounds')
     startTimer()
 }
 
