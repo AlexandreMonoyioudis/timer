@@ -1,5 +1,4 @@
 let timer;
-let
 let round = 3;
 let minutes = 2;
 let seconds = 0;
