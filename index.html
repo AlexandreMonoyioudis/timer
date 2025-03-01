@@ -20,9 +20,9 @@
     <input type="number" id="setRounds" placeholder="Rounds" min="0" max="59">
     <input type="number" id="setMinutes" placeholder="Minutes" min="0" max="59">
     <input type="number" id="setSeconds" placeholder="Seconds" min="0" max="59">
-    <button onclick="startTimer()">Start</button>
+    <button onclick="setAndStartTimer()">Start</button>
     </div>
-    <div class="timer">
+    <div class="timer" style="visibility: hidden;">
     <script src="script.js"></script>
     <div class="counters">
         Round: <span id="rounds">1</span><br>
