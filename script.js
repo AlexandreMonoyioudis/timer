@@ -33,7 +33,7 @@ function updateTime() {
     if (seconds === 0 && minutes === 0) {
         minutes = 2;
         round--;
-        document.getElementById('time').innerText = round;
+        document.getElementById('rounds').innerText = round;
     }
     
     if (seconds === 0) {
