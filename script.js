@@ -26,7 +26,6 @@ function resetTimer() {
 }
 
 function updateTime() {
-    seconds--;
     if (seconds === 0) {
         seconds = 60;
         minutes--;
@@ -35,6 +34,7 @@ function updateTime() {
         minutes = 60;
         hours--;
     }
+    seconds--;
 
     document.getElementById('time').innerText = 
         (hours < 10 ? '0' + hours : hours) + ':' + 
