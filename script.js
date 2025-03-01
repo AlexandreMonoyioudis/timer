@@ -3,6 +3,16 @@ let round = 3;
 let minutes = 2;
 let seconds = 0;
 let running = false;
+let startMinutes = 0;
+let startSeconds = 0;
+
+function setAndStartTimer(){
+    
+    startMinutes = document.getElementById('setMinutes')
+    startMinutes = document.getElementById('setSeconds')
+    startSeconds = document.getElementById('setRounds')
+    startTimer()
+}
 
 function startTimer() {
     if (!running) {
@@ -16,23 +26,14 @@ function stopTimer() {
     clearInterval(timer);
 }
 
-function resetTimer() {
-    running = false;
-    clearInterval(timer);
-    hours = 0;
-    minutes = 2;
-    seconds = 0;
-    round = 3;
-    document.getElementById('time').innerText = '02:00';
-}
-
 function updateTime() {
     if (minutes === 0 && seconds === 0 && round === 1) {
-    
+        alert("Time's up!");
     }
     
     if (seconds === 0 && minutes === 0) {
-        minutes = 2;
+        minutes = startMinutes;
+        seconds = startSeconds;
         round--;
         document.getElementById('rounds').innerText = round;
     }
