@@ -11,7 +11,6 @@ function setAndStartTimer(){
     startMinutes = document.getElementById('setMinutes').value 
     startSeconds = document.getElementById('setSeconds').value 
     startRounds = document.getElementById('setRounds').value 
-    startTimer()
 }
 
 function startTimer() {
