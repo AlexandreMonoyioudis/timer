@@ -1,5 +1,6 @@
 let timer;
-let hours = 0;
+let
+let round = 3;
 let minutes = 2;
 let seconds = 0;
 let running = false;
@@ -22,21 +23,23 @@ function resetTimer() {
     hours = 0;
     minutes = 0;
     seconds = 0;
-    document.getElementById('time').innerText = '00:00:00';
+    document.getElementById('time').innerText = '00:00';
 }
 
 function updateTime() {
+if (minutes === 0 && seconds === 0 && round === 1) {
+    }
+     if (seconds === 0 && minutes === 0) {
+        minutes = 2;
+        round--;
+    }
     if (seconds === 0) {
         seconds = 60;
         minutes--;
     }
-    if (minutes === 0) {
-        minutes = 60;
-        hours--;
-    }
+    
     seconds--;
     document.getElementById('time').innerText = 
-        (hours < 10 ? '0' + hours : hours) + ':' + 
         (minutes < 10 ? '0' + minutes : minutes) + ':' + 
         (seconds < 10 ? '0' + seconds : seconds);
 }
