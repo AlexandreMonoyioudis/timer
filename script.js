@@ -22,7 +22,7 @@ function resetTimer() {
     hours = 0;
     minutes = 0;
     seconds = 0;
-    document.getElementById('timer').innerText = '00:00:00';
+    document.getElementById('time').innerText = '00:00:00';
 }
 
 function updateTime() {
@@ -35,7 +35,7 @@ function updateTime() {
         hours--;
     }
 
-    document.getElementById('timer').innerText = 
+    document.getElementById('time').innerText = 
         (hours < 10 ? '0' + hours : hours) + ':' + 
         (minutes < 10 ? '0' + minutes : minutes) + ':' + 
         (seconds < 10 ? '0' + seconds : seconds);
