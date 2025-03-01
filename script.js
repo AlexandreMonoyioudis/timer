@@ -9,7 +9,9 @@ let startSeconds = 0;
 function setAndStartTimer(){
     startMinutes = parseInt(document.getElementById('setMinutes').value) || 0;
     startSeconds = parseInt(document.getElementById('setSeconds').value) || 0;
-    startRounds = parseInt(document.getElementById('setRounds').value) || 1;
+    rounds = parseInt(document.getElementById('setRounds').value) || 1;
+    seconds = startSeconds;
+    minutes = startMinutes;
 }
 
 function startTimer() {
