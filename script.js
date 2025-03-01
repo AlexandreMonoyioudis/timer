@@ -22,16 +22,20 @@ function resetTimer() {
     hours = 0;
     minutes = 0;
     seconds = 0;
-    document.getElementById('time').innerText = '00:00';
+    document.getElementById('time').innerText = '02:00';
 }
 
 function updateTime() {
-if (minutes === 0 && seconds === 0 && round === 1) {
+    if (minutes === 0 && seconds === 0 && round === 1) {
+    
     }
-     if (seconds === 0 && minutes === 0) {
+    
+    if (seconds === 0 && minutes === 0) {
         minutes = 2;
         round--;
+        document.getElementById('time').innerText = round;
     }
+    
     if (seconds === 0) {
         seconds = 60;
         minutes--;
