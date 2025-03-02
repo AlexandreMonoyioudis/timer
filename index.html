@@ -16,15 +16,22 @@
     </style>
 </head>
 <body>
+    <audio id="audioPlayer" src="boxing-bells.mp3"></audio>
     <div class="setTimer">
+        <h4>exercise</h4>
     <input type="number" id="setRounds" placeholder="Rounds" min="0" max="59">
     <input type="number" id="setMinutes" placeholder="Minutes" min="0" max="59">
     <input type="number" id="setSeconds" placeholder="Seconds" min="0" max="59">
+    <br>
+    <h4>rest</h4>
+    <input type="number" id="setRestMinutes" placeholder="Minutes" min="0" max="59">
+    <input type="number" id="setRestSeconds" placeholder="Seconds" min="0" max="59">
     <button onclick="setAndStartTimer()">Start</button>
     </div>
     <div class="timer" style="visibility: hidden;">
     <script src="script.js"></script>
     <div class="counters">
+        <p id="resting" style="visibility: hidden;">Rest</p>
         Round: <span id="rounds">1</span><br>
         Time: <span id="time">00:00</span>
     </div>
