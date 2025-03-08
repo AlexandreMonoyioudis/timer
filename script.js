@@ -5,10 +5,10 @@ let minutes = 0;
 let seconds = 5;
 let running = false;
 let startMinutes = 0;
-let startSeconds = 0;
+let startSeconds = 1;
 let isResting = true;
 let restStartMinutes = 0;
-let restStartSeconds = 0;
+let restStartSeconds = 1;
 let audio = document.getElementById('audioPlayer');
 
 function setAndStartTimer() {
@@ -38,6 +38,16 @@ function startTimer() {
 function stopTimer() {
     running = false;
     clearInterval(timer);
+    round = 1;
+    startRounds = 1
+    minutes = 0;
+    seconds = 5;
+    running = false;
+    startMinutes = 0;
+    startSeconds = 1;
+    isResting = true;
+    restStartMinutes = 0;
+    restStartSeconds = 1;
 }
 function endTimer(){
     stopTimer();
@@ -51,7 +61,7 @@ function updateTime() {
         alert('Times up')
         endTimer();
     }
-    else if (seconds === 0 && minutes === 0) {
+    if (seconds === 0 && minutes === 0) {
         sound();
         isResting = !isResting;
         if (isResting){
@@ -67,15 +77,14 @@ function updateTime() {
         }
         document.getElementById('rounds').innerText = startRounds-round+'/'+(startRounds-1);
     }
-    else if (seconds === 0) {
+    if (seconds === 0) {
         seconds = 60;
         minutes--;
     }
-    
+    seconds--;
     document.getElementById('time').innerText = 
         (minutes < 10 ? '0' + minutes : minutes) + ':' + 
         (seconds < 10 ? '0' + seconds : seconds);
-    seconds--;
 }
 
 function sound() {
